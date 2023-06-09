@@ -137,4 +137,3 @@ export class ProductManager {
         return this.products[index];
     }
 };
-
