@@ -42,19 +42,23 @@ class Product {
     }
 }
 
-class ProductManager {
+export class ProductManager {
     constructor(filePath) {
         this.filePath = filePath;
         this.products = [];
     }
     initialize = async () => {
-        if(fs.existsSync(this.filePath)) {
-            const data = await fs.promises.readFile(this.filePath, 'utf8');
+        if (fs.existsSync(this.filePath)) {
+          const data = await fs.promises.readFile(this.filePath, 'utf8');
+          if (data.trim().length > 0) {
             this.products = JSON.parse(data);
-        } else {
+          } else {
             this.products = [];
+          }
+        } else {
+          this.products = [];
         }
-    }
+      }
     save = async () => {
         await fs.promises.writeFile(this.filePath, JSON.stringify(this.products, null, '\t'));
     }
@@ -134,4 +138,3 @@ class ProductManager {
     }
 };
 
-export { ProductManager };
