@@ -12,7 +12,7 @@ export default class ProductManager {
         return products;
     }
 
-     async getPrdsId(id){
+    getPrdsId = async (id) =>{
       try {
         const ProductData = await this.productModel.findOne({ _id: id });  
         return ProductData;
@@ -21,7 +21,7 @@ export default class ProductManager {
       }
     }
     
-    async deletePrds(id){  
+    deletePrds = async (id) => {  
       try {
         const productDeleted = this.productModel.deleteOne({ _id: id });
   
@@ -30,7 +30,7 @@ export default class ProductManager {
         console.log(error)
       }
     }
-    async upgradePrd(req){
+    upgradePrd = async (req) => {
       try {
         const id = req.params.id
         const body = req.body
@@ -41,7 +41,7 @@ export default class ProductManager {
         console.log(error)
       }
     }
-    async newPrd(body){
+    newPrd = async (body) => {
       try {
         const newProduct = await this.productModel.create(body);
         return newProduct;

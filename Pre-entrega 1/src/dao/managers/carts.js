@@ -5,7 +5,7 @@ export class cartManager {
   constructor(){
     this.cartModel = cartModel;
   }
-    async getCarts() {    
+    getCarts = async()=> {    
       try {
         const cart = await this.cartModel.find({});
         return cart;
@@ -14,7 +14,7 @@ export class cartManager {
       }
     }
 
-     async getCartsId(id){
+    getCartsId=async(id)=>{
       try {
         const cartData = await this.cartModel.findOne({ _id: id });  
         return cartData;

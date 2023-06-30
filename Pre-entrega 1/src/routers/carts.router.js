@@ -27,20 +27,26 @@ function readCartsFromFile() {
 let carts = readCartsFromFile();
 const cartM = new cartManager();
 
-router.get('/', (req, res) => {
-  cartM.getCarts()
+router.get('/', async(req, res) => {
+  const carts = await cartM.getCarts()
+  res.send(carts)
 });
 
-router.get('/:id', (req, res) => {
-  cartM.getCartsId(req.params.id)
+router.get('/:id', async(req, res) => {
+  const cart = await cartM.getCartsId(req.params.id)
+  res.send(cart)
 });
 
-router.post('/', (req, res) => {
+router.post('/', async(req, res) => {
+  const carts = await cartM.getCarts()
   cartM.newCart(req.body)
+  res.send(carts)
 });
 
-router.post('/:cid/product/:pid', (req, res) => {
+router.post('/:cid/product/:pid', async(req, res) => {
+  const carts = await cartM.getCarts()
   cartM.cartPrd(res,req,carts)
+  res.send(carts)
 });
 
 export default router;

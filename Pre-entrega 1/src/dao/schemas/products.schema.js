@@ -12,7 +12,7 @@ const productschema = new mongoose.Schema({
     required: true,
   },
   code: {
-    type: Number,
+    type: mongoose.Schema.Types.Mixed,
     required: true
   },
   price: {
@@ -23,10 +23,10 @@ const productschema = new mongoose.Schema({
     type: Number,
     required: true
   },
-  stock: {
-    type: Number,
+  category: {
+    type: mongoose.Schema.Types.Mixed,
     required: true
-  }
+  },
 })
 
 const productModel = mongoose.model(productsCollection, productschema);

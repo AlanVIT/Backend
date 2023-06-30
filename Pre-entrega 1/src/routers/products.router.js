@@ -30,23 +30,28 @@ router.get('/', async (req, res) => {
   res.send(products)
 });
 
-router.get('/:id', (req, res) => {
+router.get('/:id',async (req, res) => {
 
-  productM.getPrdsId(req.params.id)
+  const product = await productM.getPrdsId(req.params.id)
+  res.send(product)
 
 });
 
-router.delete('/:id', (req, res) => {
-  productM.deletePrds(req.params.id)
+router.delete('/:id', async(req, res) => {
+  await productM.deletePrds(req.params.id)
+  res.send(productM.getPrdsId(req.params.id))
+
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id',async (req, res) => {
   productM.upgradePrd(req)
+  res.send(await productM.getPrdsId(req.params.id))
 
 });
 
-router.post('/', (req, res) => {
+router.post('/',async (req, res) => {
   productM.newPrd(req.body)
+  res.send(productM.getPrds())
 });
 
 export default router;
