@@ -2,7 +2,7 @@ import { Router } from "express";
 import fs from "fs";
 import { fileURLToPath } from "url";
 import path from "path";
-import { cartManager } from "../managers/carts.js";
+import { cartManager } from "../dao/managers/carts.js";
 
 const router = Router();
 const __filename = fileURLToPath(import.meta.url);
@@ -28,15 +28,15 @@ let carts = readCartsFromFile();
 const cartM = new cartManager();
 
 router.get('/', (req, res) => {
-  cartM.getCarts(res, carts)
+  cartM.getCarts()
 });
 
 router.get('/:id', (req, res) => {
-  cartM.getCartsId(res,req,carts)
+  cartM.getCartsId(req.params.id)
 });
 
 router.post('/', (req, res) => {
-  cartM.newCart(res,req,carts)
+  cartM.newCart(req.body)
 });
 
 router.post('/:cid/product/:pid', (req, res) => {

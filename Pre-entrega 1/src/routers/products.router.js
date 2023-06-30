@@ -2,7 +2,7 @@ import { Router } from "express";
 import fs from "fs";
 import { fileURLToPath } from "url";
 import path from "path";
-import { ProductManager } from "../managers/products.js";
+import ProductManager  from "../dao/managers/products.js";
 
 const router = Router();
 const __filename = fileURLToPath(import.meta.url);
@@ -21,33 +21,32 @@ function readProductsFromFile() {
   }
 }
 
-
-
 let prds = readProductsFromFile();
 
 const productM = new ProductManager();
 
-router.get('/', (req, res) => {
-  productM.getPrds(res, req, prds)
+router.get('/', async (req, res) => {
+  const products = await productM.getPrds()
+  res.send(products)
 });
 
 router.get('/:id', (req, res) => {
 
-  productM.getPrdsId(res, req, prds)
+  productM.getPrdsId(req.params.id)
 
 });
 
 router.delete('/:id', (req, res) => {
-  productM.deletePrds(res, req, prds)
+  productM.deletePrds(req.params.id)
 });
 
 router.put('/:id', (req, res) => {
-  productM.upgradePrd(res, req, prds)
+  productM.upgradePrd(req)
 
 });
 
 router.post('/', (req, res) => {
-  productM.newPrd(res, req, prds)
+  productM.newPrd(req.body)
 });
 
 export default router;
