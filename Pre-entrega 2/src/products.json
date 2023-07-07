@@ -1,0 +1,29 @@
+[
+  {
+    "title": "I5 10th gen",
+    "description": "es una I5, se recomienda",
+    "code": "aaa",
+    "price": 20000,
+    "stock": "2",
+    "category": "a",
+    "id": 4411
+  },
+  {
+    "title": "I5 10th gen",
+    "description": "es una I5, se recomienda",
+    "code": "aaa",
+    "price": 20000,
+    "stock": "2",
+    "category": "procesadores",
+    "id": 393
+  },
+  {
+    "title": "I5 10th gen",
+    "description": "es una I5, se recomienda",
+    "code": "aaa",
+    "price": 20000,
+    "stock": "2",
+    "category": "procesadores",
+    "id": 9174
+  }
+]
