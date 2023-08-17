@@ -1,5 +1,6 @@
 import CartsModel from '../models/carts.model.js';
 import ProductsModel from '../models/products.model.js';
+import { ticketAct } from './products.manager.js';
 
 class CartManager {
   constructor() {
@@ -161,6 +162,32 @@ class CartManager {
       throw new Error(`Error al agregar productos al carrito: ${error.message}`);
     }
   }
+
+  getPurchase= async(cartId) => {
+    try {
+      const cart = await this.cartModel.findById(cartId);
+      if (!cart) {
+        throw new Error('Carrito no encontrado');
+      }
+
+      const existingProducts = cart.products.map((product) => product.product._id.toString());
+
+      existingProducts.sort()
+      ticketAct.sort()
+      existingProducts.forEach(prd =>{
+        for(const product of ticketAct){
+          if(prd.stock >= product.stock){
+            throw new Error('no hay stock suficiente de' + prd);
+          }
+        } 
+      })
+      await cart.save();
+      return cart;
+    } catch (error) {
+      throw new Error(`Error al agregar productos al carrito: ${error.message}`);
+    }
+  }  
 }
+
 
 export { CartManager };

@@ -1,5 +1,7 @@
 import ProductsModel from '../models/products.model.js';
 
+export const ticketAct = [] 
+
 export class ProductManager {
   constructor() {
     this.productsModel = ProductsModel;
@@ -70,6 +72,7 @@ export class ProductManager {
   addProduct = async (newFields) => {
     try {
       const newProduct = await this.productsModel.create(newFields);
+      ticketAct.push(newProduct)
       return newProduct;
     } catch (error) {
       throw new Error(`No se pudo agregar el producto: ${error.message}`);
@@ -94,6 +97,7 @@ export class ProductManager {
       if (!product) {
         throw new Error('Producto no encontrado');
       }
+      ticketAct.filter(!product)
     } catch (error) {
       throw new Error(`No se pudo eliminar el producto: ${error.message}`);
     }
