@@ -37,7 +37,7 @@ export const CartController = {
         try {
             const cartId = req.params.cartId;
             const products = req.body.products;
-            const cart = await cartManager.addProductsToCart(cartId, products)
+            const cart = await cartManager.addProductsToCart(cartId, products);
             res.status(201).send({ status: 1, msg: 'Carrito actualizado con éxito', cartProducts: cart.products });
         } catch (error) {
             res.status(500).send({ status: 0, msg: error.message });
