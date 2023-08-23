@@ -4,7 +4,8 @@ import { createCart,getPurchase,getCart,addProductsToCart,addToCart,removeFromCa
 const router = Router();
 
 router.post('/', createCart);
-router.get('/:cid/purchase', getPurchase);
+// remplazar post por get
+router.post('/:cid/purchase', getPurchase);
 router.get('/:cartId', getCart);
 router.put('/:cartId', addProductsToCart);
 router.post('/:cartId/products/:productId', addToCart);

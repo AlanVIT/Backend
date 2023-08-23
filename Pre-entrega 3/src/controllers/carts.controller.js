@@ -16,11 +16,36 @@ export const CartController = {
         try {
             const cartId = req.params.cartId;
             const cart = await cartManager.getCart(cartId);
-            cartManager.
-            res.json({ status: 1, cart });
+    
+            const unavailableProducts = [];
+            let purchaseAllowed = true;
+    
+            for (const item of cart.items) {
+                const product = await Product.findOne({ _id: item.productId });
+    
+                if (!product) {
+                    res.json({ status: 0, msg: `Producto con ID ${item.productId} no encontrado` });
+                    return;
+                }
+    
+                if (product.stock < item.quantity) {
+                    unavailableProducts.push(product.name);
+                    purchaseAllowed = false;
+                }
+            }
+    
+            if (!purchaseAllowed) {
+                res.json({
+                    status: 0,
+                    msg: 'No se pudo generar la compra ya que faltan los siguientes productos:',
+                    unavailableProducts
+                });
+            } else {
+                res.json({ status: 1, msg: 'Compra generada exitosamente' });
+            }
         } catch (error) {
             res.status(500).json({ error: error.message });
-        }
+        }    
     },
 
     async getCart(req, res) {

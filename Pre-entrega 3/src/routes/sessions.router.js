@@ -33,6 +33,16 @@ router.post('/logout', (req, res) => {
     res.send({ status: 1, msg: 'Usuario desconectado con exito ' });
 });
 
+// Agregar ruta current
+router.get('/current', (req, res) => {
+    if (req.isAuthenticated()) {
+        res.status(200).send({ status: 1, user: req.session.user });
+    } else {
+        res.status(401).send({ status: 0, msg: 'No hay sesión iniciada' });
+    }
+});
+// _____________________
+
 router.get('/authFailureRegister', (req, res) => {
     const error = req.flash('error')[0];
     res.status(400).send({ status: 0, msg: error });

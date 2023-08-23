@@ -3,8 +3,17 @@ import { ProductManager } from "../dao/managers/products.manager.js";
 const productManager = new ProductManager()
 
 export const getProducts = (req, res) =>{
-    const result = productManager.getProducts()
-    res.send({result})
+    const { limit = 10, page = 1, sort, query } = req.query;
+// Agregar limite a los requests
+    if(query !== 'asc' ||query !== 'des'){
+      res.status(500).send('query debe ser asc o des');
+    } 
+    try {
+        const result = productManager.paginate(filter, {limit:limit, page:page}).sort({fieldName: sort, sortOrder: query });
+        res.send(result);
+      } catch (error) {
+        res.status(500).send('Error en la consulta');
+      }
 }
 
 export const addProduct = (req, res) =>{
