@@ -17,17 +17,34 @@ import mongoose from 'mongoose';
 import passport from 'passport';
 import initializePassport from './config/passport.config.js';
 import flash from 'connect-flash';
+import logger from './utils/logger.js';
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
+const ENVIRONMENT = process.env.NODE_ENV || 'development';
 
 const app = express();
+
 app.use(express.json())
 app.use(express.urlencoded({extended:true}));
 app.use(cors());
 
+app.use(session({
+    store: new MongoStore({
+        mongoUrl: MONGO,
+        ttl: 3600
+    }),
+    secret: SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false
+}))
+
 app.engine('handlebars', handlebars.engine());
 app.set('views', __dirname + '/views');
 app.set('view engine', 'handlebars');
+
+if (ENVIRONMENT === 'development') {
+    logger.level = 'debug';
+}
 
 const MONGO = "mongodb+srv://AlanVT:AlanVT@alanvt.egiux6n.mongodb.net/ecomerce" 
 const connection = mongoose.connect(MONGO)
@@ -43,21 +60,20 @@ mongoose.connect(MONGO, {
     console.log(`Cannot connect to MongoDB ${DB_NAME} database`);
 });
 
-app.use(session({
-    store: new MongoStore({
-        mongoUrl: mongo,
-        ttl: 3600
-    }),
-    secret: SESSION_SECRET,
-    resave: false,
-    saveUninitialized: false
-}))
-
 
 initializePassport(passport);
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use((req, res, next) => {
+    logger.info(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+    next();
+});
+app.use((err, req, res, next) => {
+    logger.error(`[${new Date().toISOString()}] Error: ${err.message}`);
+    res.status(500).json({ error: 'Internal Server Error' });
+});
 
 //Public folder config
 app.use('/files', express.static(path.join(__dirname, './public')));
@@ -72,12 +88,20 @@ app.use('/api/carts', cartsRouter);
 app.use('/api/messages', messagesRouter);
 app.use('/', viewsRouter);
 
-
+app.get('/loggerTest', (req, res) => {
+    logger.debug('Mensaje de debug');
+    logger.http('Mensaje de HTTP');
+    logger.info('Mensaje de info');
+    logger.warning('Mensaje de advertencia');
+    logger.error('Mensaje de error');
+    logger.fatal('Mensaje fatal');
+    res.status(200).send('Logs enviados');
+});
 
 //Server config
 const serverHttp = app.listen(PORT, () => {
     displayRoutes(app);
-    console.log(`Flowery 4107 Backend server is now up on port ${PORT}`)
+    logger.info(`Flowery 4107 Backend server is now up on port ${PORT}`);
 });
 
 //Socket.io config: link http server to socket.io server
