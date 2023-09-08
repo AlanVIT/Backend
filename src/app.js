@@ -28,24 +28,6 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}));
 app.use(cors());
 
-app.use(session({
-    store: new MongoStore({
-        mongoUrl: MONGO,
-        ttl: 3600
-    }),
-    secret: SESSION_SECRET,
-    resave: false,
-    saveUninitialized: false
-}))
-
-app.engine('handlebars', handlebars.engine());
-app.set('views', __dirname + '/views');
-app.set('view engine', 'handlebars');
-
-if (ENVIRONMENT === 'development') {
-    logger.level = 'debug';
-}
-
 const MONGO = "mongodb+srv://AlanVT:AlanVT@alanvt.egiux6n.mongodb.net/ecomerce" 
 const connection = mongoose.connect(MONGO)
 
@@ -59,6 +41,26 @@ mongoose.connect(MONGO, {
 .catch(err => {
     console.log(`Cannot connect to MongoDB ${DB_NAME} database`);
 });
+
+app.use(session({
+    store: new MongoStore({
+        mongoUrl: MONGO,
+        ttl: 3600
+    }),
+    // secret: SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false
+}))
+
+app.engine('handlebars', handlebars.engine());
+app.set('views', __dirname + '/views');
+app.set('view engine', 'handlebars');
+
+if (ENVIRONMENT === 'development') {
+    logger.level = 'debug';
+}
+
+
 
 
 initializePassport(passport);
