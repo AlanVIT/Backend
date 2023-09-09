@@ -21,6 +21,10 @@ import logger from './utils/logger.js';
 
 const PORT = process.env.PORT || 8080;
 const ENVIRONMENT = process.env.NODE_ENV || 'development';
+const MONGO = "mongodb+srv://AlanVT:AlanVT@alanvt.egiux6n.mongodb.net/ecomerce" 
+const DB_NAME = 'ecomerce';
+const SESSION_SECRET = 'secret';
+
 
 const app = express();
 
@@ -46,7 +50,6 @@ if (ENVIRONMENT === 'development') {
     logger.level = 'debug';
 }
 
-const MONGO = "mongodb+srv://AlanVT:AlanVT@alanvt.egiux6n.mongodb.net/ecomerce" 
 const connection = mongoose.connect(MONGO)
 
 mongoose.connect(MONGO, {
