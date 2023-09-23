@@ -18,11 +18,30 @@ import passport from 'passport';
 import initializePassport from './config/passport.config.js';
 import flash from 'connect-flash';
 import logger from './utils/logger.js';
+import swaggerJSDoc from 'swagger-jsdoc';
+import swaggerUIExpress from 'swagger-ui-express';
 
 const PORT = process.env.PORT || 8080;
 const ENVIRONMENT = process.env.NODE_ENV || 'development';
+const MONGO = "mongodb+srv://AlanVT:AlanVT@alanvt.egiux6n.mongodb.net/ecomerce" 
+const DB_NAME = 'ecomerce';
+const SESSION_SECRET = 'secret';
+
 
 const app = express();
+// confi de swagger
+const swaggerOptions = {
+    definition: {
+        openapi: '3.0.1',
+        info: {
+            title: 'Documentacion API Adopme',
+            description: 'Documentacion para uso de swagger!!'
+        }
+    },
+    apis: [`./src/docs/*.yaml`] // Ruta relativa al archivo YAML
+}
+const specs = swaggerJSDoc(swaggerOptions);
+app.use('/apidocs', swaggerUIExpress.serve, swaggerUIExpress.setup(specs));
 
 app.use(express.json())
 app.use(express.urlencoded({extended:true}));
@@ -46,7 +65,6 @@ if (ENVIRONMENT === 'development') {
     logger.level = 'debug';
 }
 
-const MONGO = "mongodb+srv://AlanVT:AlanVT@alanvt.egiux6n.mongodb.net/ecomerce" 
 const connection = mongoose.connect(MONGO)
 
 mongoose.connect(MONGO, {

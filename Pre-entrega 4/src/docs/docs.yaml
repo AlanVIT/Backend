@@ -1,0 +1,167 @@
+openapi: 3.0.1
+info:
+  title: Documentación de API
+  description: Documentación de rutas de la API
+  version: 1.0.0
+paths:
+  /api/sessions/register:
+    post:
+      summary: Registro de usuario
+      description: Permite a los usuarios registrarse en la aplicación.
+      responses:
+        '200':
+          description: Usuario registrado con éxito.
+        '400':
+          description: Error en la solicitud de registro.
+  /api/sessions/login:
+    post:
+      summary: Inicio de sesión
+      description: Permite a los usuarios iniciar sesión en la aplicación.
+      responses:
+        '200':
+          description: Inicio de sesión exitoso.
+        '400':
+          description: Error en la solicitud de inicio de sesión.
+  /api/sessions/resetpassword:
+    post:
+      summary: Restablecer contraseña
+      description: Permite a los usuarios restablecer su contraseña.
+      responses:
+        '200':
+          description: Contraseña restablecida con éxito.
+        '400':
+          description: Error en la solicitud de restablecimiento de contraseña.
+  /api/sessions/logout:
+    post:
+      summary: Cerrar sesión
+      description: Permite a los usuarios cerrar sesión en la aplicación.
+      responses:
+        '200':
+          description: Sesión cerrada con éxito.
+  /api/sessions/current:
+    get:
+      summary: Usuario actual
+      description: Obtiene la información del usuario actualmente autenticado.
+      responses:
+        '200':
+          description: Información del usuario obtenida con éxito.
+        '401':
+          description: Usuario no autenticado.
+  /api/sessions/authFailureRegister:
+    get:
+      summary: Fallo de autenticación en el registro
+      description: Página de fallo de autenticación para el registro.
+      responses:
+        '200':
+          description: Página de fallo de autenticación mostrada con éxito.
+  /api/sessions/authFailureLogin:
+    get:
+      summary: Fallo de autenticación en el inicio de sesión
+      description: Página de fallo de autenticación para el inicio de sesión.
+      responses:
+        '200':
+          description: Página de fallo de autenticación mostrada con éxito.
+  /api/sessions/authFailureReset:
+    get:
+      summary: Fallo de autenticación en el restablecimiento de contraseña
+      description: Página de fallo de autenticación para el restablecimiento de contraseña.
+      responses:
+        '200':
+          description: Página de fallo de autenticación mostrada con éxito.
+  /api/sessions/github:
+    get:
+      summary: Inicio de sesión con GitHub
+      description: Permite a los usuarios iniciar sesión con su cuenta de GitHub.
+      responses:
+        '200':
+          description: Inicio de sesión con GitHub exitoso.
+        '401':
+          description: Fallo en el inicio de sesión con GitHub.
+  /api/sessions/githubcallback:
+    get:
+      summary: Callback de inicio de sesión con GitHub
+      description: Callback para el inicio de sesión con GitHub.
+      responses:
+        '200':
+          description: Callback de inicio de sesión con GitHub exitoso.
+        '401':
+          description: Fallo en el callback de inicio de sesión con GitHub.
+  /api/sessions/githubFailure:
+    get:
+      summary: Fallo de inicio de sesión con GitHub
+      description: Página de fallo de inicio de sesión con GitHub.
+      responses:
+        '200':
+          description: Página de fallo de inicio de sesión con GitHub mostrada con éxito.
+  /api/products:
+    get:
+      summary: Obtener todos los productos
+      description: Obtiene todos los productos disponibles.
+      responses:
+        '200':
+          description: Productos obtenidos con éxito.
+    post:
+      summary: Crear un nuevo producto
+      description: Crea un nuevo producto en la base de datos.
+      responses:
+        '201':
+          description: Producto creado con éxito.
+        '400':
+          description: Error en la solicitud de creación de producto.
+    put:
+      summary: Actualizar un producto
+      description: Actualiza la información de un producto existente.
+      responses:
+        '200':
+          description: Producto actualizado con éxito.
+        '400':
+          description: Error en la solicitud de actualización de producto.
+    delete:
+      summary: Eliminar un producto
+      description: Elimina un producto existente de la base de datos.
+      responses:
+        '200':
+          description: Producto eliminado con éxito.
+        '400':
+          description: Error en la solicitud de eliminación de producto.
+  /api/products/{productId}:
+    get:
+      summary: Obtener un producto por ID
+      description: Obtiene la información de un producto específico por su ID.
+      responses:
+        '200':
+          description: Producto obtenido con éxito.
+        '404':
+          description: Producto no encontrado.
+    put:
+      summary: Actualizar un producto por ID
+      description: Actualiza la información de un
+
+
+ 
+components:
+  schemas:
+    User: 
+      type: object
+      properties:
+        _id: 
+          type: ObjectId
+          description: Id autogenerado de MongoDB.
+        first_name: 
+          type: String
+          description: Nombre del usuario
+        last_name:
+          type: String
+          description: Apellido del usuario
+        email:
+          type: String
+          description: Email del usuario
+        password:
+          type: String
+          description: Contraseña del usuario
+      example: 
+        _id: ObjectId("647fa8c9e46dbc5a20320181")
+        first_name: Usuario de prueba 1
+        last_name: Apellido de prueba 1
+        email: correodeprueba1@gmail.com
+        password: 123456
