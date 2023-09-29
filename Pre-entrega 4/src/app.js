@@ -38,7 +38,7 @@ const swaggerOptions = {
             description: 'Documentacion para uso de swagger!!'
         }
     },
-    apis: [`./src/docs/*.yaml`] // Ruta relativa al archivo YAML
+    apis: [`./src/docs/*.yaml`] 
 }
 const specs = swaggerJSDoc(swaggerOptions);
 app.use('/apidocs', swaggerUIExpress.serve, swaggerUIExpress.setup(specs));
@@ -132,3 +132,5 @@ io.on('connection', socket => {
     productsUpdated(io);
     chat(socket, io);
 });
+
+export default app

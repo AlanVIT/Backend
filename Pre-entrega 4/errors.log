@@ -407,3 +407,97 @@
 {"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
 {"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
 {"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-09-29T01:19:32.082Z] GET /"}
+{"level":"info","message":"[2023-09-29T01:19:32.090Z] GET /login"}
+{"level":"info","message":"[2023-09-29T01:19:32.138Z] GET /files/img/sources/github-mark-white.png"}
+{"level":"info","message":"[2023-09-29T01:19:32.139Z] GET /files/js/login.js"}
+{"level":"info","message":"[2023-09-29T01:19:32.142Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-09-29T01:19:32.156Z] GET /favicon.ico"}
+{"level":"info","message":"[2023-09-29T01:19:33.651Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-09-29T01:19:36.113Z] GET /resetPassword"}
+{"level":"info","message":"[2023-09-29T01:19:36.458Z] GET /files/js/resetPassword.js"}
+{"level":"info","message":"[2023-09-29T01:19:36.471Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-09-29T01:19:37.468Z] GET /login"}
+{"level":"info","message":"[2023-09-29T01:19:37.590Z] GET /files/img/sources/github-mark-white.png"}
+{"level":"info","message":"[2023-09-29T01:19:37.593Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-09-29T01:19:37.601Z] GET /files/js/login.js"}
+{"level":"info","message":"[2023-09-29T01:19:38.836Z] GET /register"}
+{"level":"info","message":"[2023-09-29T01:19:38.926Z] GET /files/js/register.js"}
+{"level":"info","message":"[2023-09-29T01:19:38.930Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-09-29T01:19:41.130Z] GET /login"}
+{"level":"info","message":"[2023-09-29T01:19:41.241Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-09-29T01:19:41.250Z] GET /files/img/sources/github-mark-white.png"}
+{"level":"info","message":"[2023-09-29T01:19:41.251Z] GET /files/js/login.js"}
+{"level":"info","message":"[2023-09-29T01:19:42.767Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-09-29T01:19:43.837Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-09-29T01:19:45.717Z] GET /login"}
+{"level":"info","message":"[2023-09-29T01:19:45.781Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-09-29T01:19:45.782Z] GET /files/img/sources/github-mark-white.png"}
+{"level":"info","message":"[2023-09-29T01:19:46.077Z] GET /files/js/login.js"}
+{"level":"info","message":"[2023-09-29T01:19:47.173Z] POST /api/sessions/login"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-09-29T01:24:11.376Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-09-29T01:24:13.267Z] GET /login"}
+{"level":"info","message":"[2023-09-29T01:24:13.391Z] GET /files/js/login.js"}
+{"level":"info","message":"[2023-09-29T01:24:13.608Z] GET /files/img/sources/github-mark-white.png"}
+{"level":"info","message":"[2023-09-29T01:24:13.619Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-09-29T01:24:14.813Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-09-29T01:24:15.960Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-09-29T01:24:16.450Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-09-29T01:24:16.851Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-09-29T01:24:17.054Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-09-29T01:24:17.310Z] GET /login"}
+{"level":"info","message":"[2023-09-29T01:24:17.369Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-09-29T01:24:17.381Z] GET /files/img/sources/github-mark-white.png"}
+{"level":"info","message":"[2023-09-29T01:24:17.661Z] GET /files/js/login.js"}
+{"level":"info","message":"[2023-09-29T01:24:17.865Z] GET /login"}
+{"level":"info","message":"[2023-09-29T01:24:17.925Z] GET /files/img/sources/github-mark-white.png"}
+{"level":"info","message":"[2023-09-29T01:24:17.928Z] GET /files/js/login.js"}
+{"level":"info","message":"[2023-09-29T01:24:17.929Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-09-29T01:24:18.780Z] POST /api/sessions/login"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-09-29T01:27:14.059Z] GET /login"}
+{"level":"info","message":"[2023-09-29T01:27:14.174Z] GET /files/img/sources/github-mark-white.png"}
+{"level":"info","message":"[2023-09-29T01:27:14.390Z] GET /files/js/login.js"}
+{"level":"info","message":"[2023-09-29T01:27:14.407Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-09-29T01:27:15.904Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-09-29T01:27:17.099Z] GET /login"}
+{"level":"info","message":"[2023-09-29T01:27:17.157Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-09-29T01:27:17.425Z] GET /files/img/sources/github-mark-white.png"}
+{"level":"info","message":"[2023-09-29T01:27:17.452Z] GET /files/js/login.js"}
+{"level":"info","message":"[2023-09-29T01:27:18.230Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-09-29T01:27:18.564Z] GET /login"}
+{"level":"info","message":"[2023-09-29T01:27:18.620Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-09-29T01:27:18.625Z] GET /files/img/sources/github-mark-white.png"}
+{"level":"info","message":"[2023-09-29T01:27:18.630Z] GET /files/js/login.js"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-09-29T01:27:38.062Z] GET /files/img/sources/github-mark-white.png"}
+{"level":"info","message":"[2023-09-29T01:27:41.541Z] POST /api/sessions/login"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-09-29T01:29:11.759Z] GET /login"}
+{"level":"info","message":"[2023-09-29T01:29:11.872Z] GET /files/js/login.js"}
+{"level":"info","message":"[2023-09-29T01:29:12.107Z] GET /files/img/sources/github-mark-white.png"}
+{"level":"info","message":"[2023-09-29T01:29:12.141Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-09-29T01:29:14.959Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-09-29T01:29:17.778Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-09-29T01:30:06.145Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-09-29T01:31:05.920Z] POST /api/sessions/login"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-09-29T20:16:22.816Z] POST /api/auth/login"}
+{"level":"info","message":"[2023-09-29T20:16:22.863Z] POST /api/auth/login"}
+{"level":"info","message":"[2023-09-29T20:16:23.725Z] GET /"}
+{"level":"info","message":"[2023-09-29T20:16:23.729Z] GET /login"}
+{"level":"info","message":"[2023-09-29T20:16:23.774Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-09-29T20:16:23.778Z] GET /files/img/sources/github-mark-white.png"}
+{"level":"info","message":"[2023-09-29T20:16:23.781Z] GET /files/js/login.js"}
+{"level":"info","message":"[2023-09-29T20:16:23.796Z] GET /favicon.ico"}
+{"level":"info","message":"[2023-09-29T20:16:25.263Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-09-29T20:17:21.627Z] POST /api/sessions/login"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-09-29T20:17:32.422Z] POST /api/auth/login"}
+{"level":"info","message":"[2023-09-29T20:17:32.466Z] POST /api/auth/login"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-09-29T20:20:10.967Z] POST /api/auth/login"}
+{"level":"info","message":"[2023-09-29T20:20:11.014Z] POST /api/auth/login"}
