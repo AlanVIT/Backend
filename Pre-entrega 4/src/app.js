@@ -20,10 +20,11 @@ import flash from 'connect-flash';
 import logger from './utils/logger.js';
 import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUIExpress from 'swagger-ui-express';
+import config from './config/enviroment.js';
 
-const PORT = process.env.PORT || 8080;
-const ENVIRONMENT = process.env.NODE_ENV || 'development';
-const MONGO = "mongodb+srv://AlanVT:AlanVT@alanvt.egiux6n.mongodb.net/ecomerce" 
+const PORT = config.port;
+const ENVIRONMENT = config.environment;
+const MONGO = config.mongo_uri;
 const DB_NAME = 'ecomerce';
 const SESSION_SECRET = 'secret';
 

@@ -3,6 +3,7 @@ import local from "passport-local";
 import UsersModel from "../dao/models/users.model.js";
 import { createHash, isValidPassword } from "../utils/utils.js";
 import GitHubStrategy from "passport-github2";
+import config from "./enviroment.js";
 
 const LocalStrategy = local.Strategy;
 
@@ -14,7 +15,7 @@ const initializePassport = () => {
         let errorMsg;
         try {
             const { firstName, lastName, email, birthDate } = req.body;
-            if (username.toLowerCase() === ADMIN_USER.toLowerCase()) {
+            if (username.toLowerCase() === config.adminUser.toLowerCase()) {
                 errorMsg = "Usuario existente";
                 req.flash('error', errorMsg);
                 return done(null, false, { msg: errorMsg });
@@ -48,8 +49,8 @@ const initializePassport = () => {
         let errorMsg;
         try {
             let user;
-            if (username.toLowerCase() === ADMIN_USER.toLowerCase()) {
-                if (password !== ADMIN_PASSWORD) {
+            if (username.toLowerCase() === config.adminUser.toLowerCase()) {
+                if (password !== config.adminPassword) {
                     errorMsg = "La contraseña es incorrecta";
                     req.flash('error', errorMsg);
                     return done(null, false, { msg: errorMsg });
@@ -57,7 +58,7 @@ const initializePassport = () => {
                 user = {
                     firstName: 'Admin',
                     lastName: 'Coder',
-                    email: ADMIN_USER,
+                    email: config.adminUser,
                     birthDate: '',
                     userRole: 'admin'
                 };
@@ -90,7 +91,7 @@ const initializePassport = () => {
     }, async (req, username, password, done) => {
         let errorMsg;
         try {
-            if (username.toLowerCase() === ADMIN_USER.toLowerCase()) {
+            if (username.toLowerCase() === config.adminUser.toLowerCase()) {
                 errorMsg = "Admin password cannot be reset";
                 req.flash('error', errorMsg);
                 return done(null, false, { msg: errorMsg });
