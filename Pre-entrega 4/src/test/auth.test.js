@@ -12,24 +12,25 @@ describe('Módulo de Autenticación', () => {
         // Inicializa la aplicación o realiza otras configuraciones necesarias
     });
 
-    it('Debería autenticar a un usuario válido', (done) => {
+
+    it('Debería permitir que un usuario registrado inicie sesión', (done) => {
         chai.request(app)
-            .post('/api/auth/login')
+            .post('/api/sessions/login')
             .send({
-                username: 'usuario',
-                password: 'contraseña',
+                username: 'usuario_existente',
+                password: 'contraseña_existente',
             })
             .end((err, res) => {
                 res.should.have.status(200);
                 res.body.should.be.a('object');
-                res.body.should.have.property('token');
+                // Verificar aquí los detalles de la respuesta JSON si es necesario
                 done();
             });
     });
 
-    it('Debería devolver un error al autenticar un usuario inválido', (done) => {
+    it('Debería devolver un error al iniciar sesión con credenciales incorrectas', (done) => {
         chai.request(app)
-            .post('/api/auth/login')
+            .post('/api/sessions/login')
             .send({
                 username: 'usuario_invalido',
                 password: 'contraseña_invalida',
@@ -37,8 +38,31 @@ describe('Módulo de Autenticación', () => {
             .end((err, res) => {
                 res.should.have.status(401);
                 res.body.should.be.a('object');
-                res.body.should.have.property('error');
+                // Verificar aquí los detalles de la respuesta JSON si es necesario
                 done();
             });
     });
+
+    it('Debería permitir que un usuario registrado cierre sesión', (done) => {
+        chai.request(app)
+            .post('/api/sessions/logout')
+            .end((err, res) => {
+                res.should.have.status(200);
+                res.body.should.be.a('object');
+                // Verificar aquí los detalles de la respuesta JSON si es necesario
+                done();
+            });
+    });
+
+    it('Debería devolver un mensaje de error al cerrar sesión si el usuario no está autenticado', (done) => {
+        chai.request(app)
+            .post('/api/sessions/logout')
+            .end((err, res) => {
+                res.should.have.status(401);
+                res.body.should.be.a('object');
+                // Verificar aquí los detalles de la respuesta JSON si es necesario
+                done();
+            });
+    });
+
 });

@@ -1,7 +1,11 @@
 import { Router } from 'express';
 import passport from 'passport';
+import { validarToken } from '../utils/utils.js';
+import { UsersController } from '../controllers/users.controller.js';
+import uploader from '../utils/multer.js';
 
 const router = Router();
+const usersController = new UsersController();
 
 router.post('/register', passport.authenticate('register', { failureRedirect: '/api/sessions/authFailureRegister', failureFlash: true }), async (req, res) => {
     req.session.user = {
@@ -73,4 +77,33 @@ router.get('/githubFailure', (req, res) => {
     res.status(400).send({ status: 0, msg: 'Fallo de autenticación de Github' });
 });
 
+router.post('/pass-change/:token', validarToken, async (req, res) => {
+
+    const { password } = req.body;
+    const { email } = req;
+    const hashedPassword = createHash(password);
+    const user = { email, password: hashedPassword };
+    await usersController.updateUser(user); // TODO: crear metodo en el controller
+    res.send({ message: 'Password changed!' });
+});
+
+router.get('/premium/:uid', async (req, res) => {
+    try {
+        const { uid } = req.params;
+        const user = await usersController.updateUserRole(uid);
+        res.send({ message: 'User premium updated!', user });
+    } catch (e) {
+        res.json({ error: e.message });
+    }
+});
+
+router.post('/:uid/documents', uploader('documents').array('documents'), async (req, res) => {
+    try {
+        const { uid } = req.params;
+        const user = await usersController.updateUserDocuments(uid, req.files);
+        res.send({ message: 'User documents updated!', user });
+    } catch (e) {
+        res.json({ error: e.message });
+    }
+});
 export default router;

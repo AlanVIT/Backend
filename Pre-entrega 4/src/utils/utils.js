@@ -8,5 +8,16 @@ export const isValidPassword = (user, password) => bcrypt.compareSync(password, 
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.join(dirname(__filename), `../`);
-
+export const validarToken = (req, res, next) => {
+    try {
+        const token = req.params.token;
+        jwt.verify(token, PRIVATE_KEY);
+        const data = jwt.decode(token);
+        req.email = data.email;
+        next();
+    } catch (e) {
+        res.send(`Hubo un error al intentar recuperar password: ${e.message}`)
+    }
+    
+}
 export default __dirname;
