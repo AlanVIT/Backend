@@ -4,3 +4,113 @@
 {"level":"info","message":"Mensaje de info"}
 {"level":"warning","message":"Mensaje de advertencia"}
 {"level":"error","message":"Mensaje de error"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-10-11T00:30:35.156Z] GET /products"}
+{"level":"info","message":"[2023-10-11T00:30:36.463Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-11T00:30:37.270Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-10-11T00:35:50.243Z] GET /resetpassword"}
+{"level":"info","message":"[2023-10-11T00:35:51.525Z] GET /products"}
+{"level":"info","message":"[2023-10-11T00:35:52.054Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-11T00:35:52.065Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-11T00:36:01.865Z] GET /resetPassword"}
+{"level":"info","message":"[2023-10-11T00:36:02.073Z] GET /products"}
+{"level":"info","message":"[2023-10-11T00:36:02.580Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-11T00:36:02.586Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-11T00:36:59.318Z] GET /"}
+{"level":"info","message":"[2023-10-11T00:36:59.320Z] GET /login"}
+{"level":"info","message":"[2023-10-11T00:36:59.331Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-10-11T00:36:59.336Z] GET /files/img/sources/github-mark-white.png"}
+{"level":"info","message":"[2023-10-11T00:36:59.337Z] GET /files/js/login.js"}
+{"level":"info","message":"[2023-10-11T00:36:59.352Z] GET /favicon.ico"}
+{"level":"info","message":"[2023-10-11T00:37:05.022Z] GET /register"}
+{"level":"info","message":"[2023-10-11T00:37:05.032Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-10-11T00:37:05.033Z] GET /files/js/register.js"}
+{"level":"info","message":"[2023-10-11T00:37:31.283Z] POST /api/sessions/register"}
+{"level":"info","message":"[2023-10-11T00:37:31.520Z] GET /api/sessions/authFailureRegister"}
+{"level":"info","message":"[2023-10-11T00:37:34.481Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-10-11T00:37:38.497Z] POST /api/sessions/register"}
+{"level":"info","message":"[2023-10-11T00:37:38.812Z] GET /api/sessions/authFailureRegister"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-10-11T00:39:25.329Z] GET /register"}
+{"level":"info","message":"[2023-10-11T00:39:25.484Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-10-11T00:39:25.762Z] GET /files/js/register.js"}
+{"level":"info","message":"[2023-10-11T00:39:41.425Z] POST /api/sessions/register"}
+{"level":"info","message":"[2023-10-11T00:39:41.598Z] GET /api/sessions/authFailureRegister"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-10-11T00:42:12.742Z] POST /api/sessions/register"}
+{"level":"info","message":"[2023-10-11T00:42:13.175Z] GET /api/sessions/authFailureRegister"}
+{"level":"info","message":"[2023-10-11T00:42:16.905Z] POST /api/sessions/register"}
+{"level":"info","message":"[2023-10-11T00:42:17.013Z] GET /api/sessions/authFailureRegister"}
+{"level":"info","message":"[2023-10-11T00:42:26.613Z] GET /register"}
+{"level":"info","message":"[2023-10-11T00:42:27.453Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-10-11T00:42:27.472Z] GET /files/js/register.js"}
+{"level":"info","message":"[2023-10-11T00:42:30.847Z] GET /login"}
+{"level":"info","message":"[2023-10-11T00:42:31.166Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-10-11T00:42:31.172Z] GET /files/img/sources/github-mark-white.png"}
+{"level":"info","message":"[2023-10-11T00:42:31.850Z] GET /files/js/login.js"}
+{"level":"info","message":"[2023-10-11T00:42:36.242Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-10-11T00:42:36.500Z] GET /api/sessions/authFailureLogin"}
+{"level":"info","message":"[2023-10-11T00:42:40.180Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-10-11T00:42:40.459Z] GET /api/sessions/authFailureLogin"}
+{"level":"info","message":"[2023-10-11T00:42:42.017Z] GET /login"}
+{"level":"info","message":"[2023-10-11T00:42:42.148Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-10-11T00:42:42.155Z] GET /files/js/login.js"}
+{"level":"info","message":"[2023-10-11T00:42:42.157Z] GET /files/img/sources/github-mark-white.png"}
+{"level":"info","message":"[2023-10-11T00:42:43.147Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-10-11T00:42:43.228Z] GET /api/sessions/authFailureLogin"}
+{"level":"info","message":"[2023-10-11T00:42:48.325Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-10-11T00:42:48.942Z] GET /api/sessions/authFailureLogin"}
+{"level":"info","message":"[2023-10-11T00:42:52.207Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-10-11T00:42:52.676Z] GET /api/sessions/authFailureLogin"}
+{"level":"info","message":"[2023-10-11T00:42:56.764Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-10-11T00:42:56.920Z] GET /api/sessions/authFailureLogin"}
+{"level":"info","message":"[2023-10-11T00:44:31.157Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-10-11T00:44:32.051Z] GET /products"}
+{"level":"info","message":"[2023-10-11T00:44:32.596Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-11T00:44:32.597Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-11T00:44:34.911Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-10-11T00:44:36.499Z] GET /login"}
+{"level":"info","message":"[2023-10-11T00:44:36.759Z] GET /products"}
+{"level":"info","message":"[2023-10-11T00:44:37.202Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-11T00:44:37.204Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-11T00:44:42.426Z] GET /logout"}
+{"level":"info","message":"[2023-10-11T00:45:22.486Z] GET /api/sessions/logout"}
+{"level":"info","message":"[2023-10-11T00:45:25.371Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-11T00:45:28.844Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-10-11T00:45:35.800Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-10-11T00:45:36.002Z] GET /api/sessions/authFailureLogin"}
+{"level":"info","message":"[2023-10-11T00:45:37.734Z] GET /login"}
+{"level":"info","message":"[2023-10-11T00:45:37.837Z] GET /products"}
+{"level":"info","message":"[2023-10-11T00:45:38.046Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-11T00:45:38.051Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-11T00:45:39.065Z] GET /products"}
+{"level":"info","message":"[2023-10-11T00:45:39.270Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-11T00:45:39.270Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-11T00:45:42.554Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-11T00:45:46.778Z] GET /"}
+{"level":"info","message":"[2023-10-11T00:45:46.888Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-10-11T00:45:55.279Z] GET /login"}
+{"level":"info","message":"[2023-10-11T00:45:55.392Z] GET /products"}
+{"level":"info","message":"[2023-10-11T00:45:55.619Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-11T00:45:55.623Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-11T00:46:31.620Z] GET /resetpassword"}
+{"level":"info","message":"[2023-10-11T00:46:31.723Z] GET /products"}
+{"level":"info","message":"[2023-10-11T00:46:31.940Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-11T00:46:31.940Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-11T00:46:38.263Z] GET /files/css/login.css"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}

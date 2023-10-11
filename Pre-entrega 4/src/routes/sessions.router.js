@@ -29,6 +29,7 @@ router.post('/login', passport.authenticate('login', { failureRedirect: '/api/se
 });
 
 router.post('/resetpassword', passport.authenticate('resetPassword', { failureRedirect: '/api/sessions/authFailureReset', failureFlash: true }), async (req, res) => {
+   usersController.sendEmail(req.user.email)
     res.send({ status: 1, msg: 'Contraseña restablecida con éxito. Será redirigido a la página de inicio de sesión' });
 });
 
