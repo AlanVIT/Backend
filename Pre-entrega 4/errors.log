@@ -3,7 +3,6 @@
 {"level":"http","message":"Mensaje de HTTP"}
 {"level":"info","message":"Mensaje de info"}
 {"level":"warning","message":"Mensaje de advertencia"}
-{"level":"error","message":"Mensaje de error"}
 {"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
 {"level":"info","message":"[2023-10-11T00:30:35.156Z] GET /products"}
 {"level":"info","message":"[2023-10-11T00:30:36.463Z] GET /files/css/productList.css"}
@@ -114,3 +113,232 @@
 {"level":"info","message":"[2023-10-11T00:46:31.940Z] GET /files/js/addProductToCart.js"}
 {"level":"info","message":"[2023-10-11T00:46:38.263Z] GET /files/css/login.css"}
 {"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-10-12T18:35:56.465Z] GET /"}
+{"level":"info","message":"[2023-10-12T18:35:56.471Z] GET /login"}
+{"level":"info","message":"[2023-10-12T18:35:56.515Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-10-12T18:35:56.518Z] GET /files/img/sources/github-mark-white.png"}
+{"level":"info","message":"[2023-10-12T18:35:56.518Z] GET /files/js/login.js"}
+{"level":"info","message":"[2023-10-12T18:35:56.548Z] GET /favicon.ico"}
+{"level":"info","message":"[2023-10-12T18:36:02.686Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-10-12T18:36:03.069Z] GET /products"}
+{"level":"info","message":"[2023-10-12T18:36:03.300Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T18:36:03.607Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T18:36:09.358Z] POST /api/carts/undefined/products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T18:36:12.180Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T18:36:13.366Z] POST /api/carts/undefined/products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T18:36:21.119Z] GET /products"}
+{"level":"info","message":"[2023-10-12T18:36:21.295Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T18:36:21.546Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T18:36:22.743Z] POST /api/carts/undefined/products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T18:36:23.630Z] GET /products"}
+{"level":"info","message":"[2023-10-12T18:36:23.788Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T18:36:23.800Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T18:36:24.756Z] POST /api/carts/undefined/products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T18:36:26.311Z] POST /api/carts/undefined/products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T18:36:27.478Z] POST /api/carts/undefined/products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T18:36:40.603Z] POST /api/carts/undefined/products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T18:36:43.162Z] POST /api/carts/undefined/products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-10-12T18:52:13.384Z] GET /products"}
+{"level":"info","message":"[2023-10-12T18:52:13.892Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T18:52:13.913Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-10-12T18:55:17.007Z] GET /products"}
+{"level":"info","message":"[2023-10-12T18:55:17.447Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T18:55:17.452Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T18:55:19.768Z] GET /products"}
+{"level":"info","message":"[2023-10-12T18:55:19.934Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T18:55:19.935Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T18:55:30.599Z] GET /products"}
+{"level":"info","message":"[2023-10-12T18:55:30.769Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T18:55:30.770Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-10-12T18:56:28.154Z] GET /products"}
+{"level":"info","message":"[2023-10-12T18:56:28.606Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T18:56:28.625Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T18:56:29.591Z] GET /products"}
+{"level":"info","message":"[2023-10-12T18:56:29.748Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T18:56:29.753Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T18:56:30.229Z] GET /products"}
+{"level":"info","message":"[2023-10-12T18:56:30.379Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T18:56:30.385Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T18:56:30.926Z] GET /products"}
+{"level":"info","message":"[2023-10-12T18:56:31.095Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T18:56:31.096Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T18:56:32.560Z] GET /products"}
+{"level":"info","message":"[2023-10-12T18:56:32.720Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T18:56:32.726Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T18:56:36.468Z] GET /"}
+{"level":"info","message":"[2023-10-12T18:56:36.581Z] GET /files/css/login.css"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-10-12T18:57:29.824Z] GET /"}
+{"level":"info","message":"[2023-10-12T18:57:30.250Z] GET /files/css/login.css"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-10-12T18:58:38.779Z] GET /"}
+{"level":"info","message":"[2023-10-12T18:58:39.165Z] GET /files/css/login.css"}
+{"level":"info","message":"[2023-10-12T18:58:42.465Z] GET /products"}
+{"level":"info","message":"[2023-10-12T18:58:42.633Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T18:58:42.886Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T18:58:59.147Z] POST /api/carts/undefined/products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-10-12T19:01:20.519Z] GET /products"}
+{"level":"info","message":"[2023-10-12T19:01:20.949Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T19:01:20.977Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T19:01:21.873Z] POST /api/carts/undefined/products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T19:01:23.771Z] GET /products"}
+{"level":"info","message":"[2023-10-12T19:01:23.943Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T19:01:23.944Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T19:01:24.376Z] POST /api/carts/undefined/products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-10-12T19:02:58.684Z] GET /products"}
+{"level":"info","message":"[2023-10-12T19:02:59.099Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T19:02:59.112Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T19:02:59.960Z] POST /api/carts/undefined/products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-10-12T19:04:43.595Z] GET /products"}
+{"level":"info","message":"[2023-10-12T19:04:44.135Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T19:04:44.186Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T19:04:45.647Z] POST /api/carts/undefined/products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-10-12T19:04:52.471Z] GET /products"}
+{"level":"info","message":"[2023-10-12T19:04:53.162Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T19:04:53.214Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T19:04:54.753Z] POST /api/carts"}
+{"level":"info","message":"[2023-10-12T19:04:54.972Z] POST /api/carts/undefined/products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T19:04:56.881Z] GET /products"}
+{"level":"info","message":"[2023-10-12T19:04:57.051Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T19:04:57.053Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T19:04:58.062Z] POST /api/carts"}
+{"level":"info","message":"[2023-10-12T19:04:58.270Z] POST /api/carts/undefined/products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T19:04:58.959Z] GET /products"}
+{"level":"info","message":"[2023-10-12T19:04:59.119Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T19:04:59.121Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T19:05:00.096Z] POST /api/carts"}
+{"level":"info","message":"[2023-10-12T19:05:00.297Z] POST /api/carts/undefined/products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-10-12T19:05:58.852Z] GET /products"}
+{"level":"info","message":"[2023-10-12T19:05:59.270Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T19:05:59.275Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T19:06:00.189Z] POST /api/carts/undefined/products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-10-12T19:08:35.284Z] GET /products"}
+{"level":"info","message":"[2023-10-12T19:08:36.021Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T19:08:36.035Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T19:08:36.632Z] POST /api/carts"}
+{"level":"info","message":"[2023-10-12T19:08:36.641Z] POST /api/carts//products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T19:08:37.557Z] GET /products"}
+{"level":"info","message":"[2023-10-12T19:08:37.715Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T19:08:37.716Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T19:08:38.127Z] POST /api/carts//products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T19:08:38.130Z] POST /api/carts"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-10-12T19:10:14.537Z] GET /products"}
+{"level":"info","message":"[2023-10-12T19:10:14.964Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T19:10:15.003Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T19:10:15.749Z] POST /api/carts"}
+{"level":"info","message":"[2023-10-12T19:10:15.765Z] POST /api/carts//products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-10-12T19:11:42.163Z] GET /products"}
+{"level":"info","message":"[2023-10-12T19:11:42.591Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T19:11:42.613Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T19:11:43.389Z] POST /api/carts"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-10-12T19:13:01.658Z] GET /products"}
+{"level":"info","message":"[2023-10-12T19:13:02.096Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T19:13:02.103Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T19:13:03.317Z] POST /api/carts"}
+{"level":"info","message":"[2023-10-12T19:13:05.862Z] GET /products"}
+{"level":"info","message":"[2023-10-12T19:13:06.024Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T19:13:06.025Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T19:13:06.881Z] POST /api/carts"}
+{"level":"info","message":"[2023-10-12T19:13:08.208Z] GET /products"}
+{"level":"info","message":"[2023-10-12T19:13:08.369Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T19:13:08.377Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T19:13:08.945Z] POST /api/carts"}
+{"level":"info","message":"[2023-10-12T19:13:09.437Z] GET /products"}
+{"level":"info","message":"[2023-10-12T19:13:09.588Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T19:13:09.596Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-10-12T19:13:54.397Z] POST /api/carts"}
+{"level":"info","message":"[2023-10-12T19:13:56.154Z] GET /products"}
+{"level":"info","message":"[2023-10-12T19:13:56.575Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T19:13:56.620Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T19:13:59.739Z] GET /products"}
+{"level":"info","message":"[2023-10-12T19:13:59.900Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T19:13:59.900Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T19:14:01.287Z] GET /products"}
+{"level":"info","message":"[2023-10-12T19:14:01.434Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T19:14:01.440Z] GET /files/css/productList.css"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-10-12T19:14:36.287Z] GET /products"}
+{"level":"info","message":"[2023-10-12T19:14:37.486Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T19:14:37.709Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T19:14:39.606Z] POST /api/carts//products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T19:14:39.609Z] POST /api/carts//products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T19:14:39.741Z] POST /api/carts//products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T19:14:39.917Z] POST /api/carts//products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T19:14:40.757Z] GET /products"}
+{"level":"info","message":"[2023-10-12T19:14:40.937Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T19:14:40.940Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T19:14:41.338Z] POST /api/carts//products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T19:14:42.418Z] POST /api/carts//products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T19:14:42.909Z] POST /api/carts//products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T19:14:43.088Z] POST /api/carts//products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T19:14:43.283Z] POST /api/carts//products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T19:14:43.458Z] POST /api/carts//products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T19:14:43.650Z] POST /api/carts//products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T19:14:43.851Z] POST /api/carts//products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T19:14:44.005Z] POST /api/carts//products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T19:14:44.209Z] POST /api/carts//products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T19:14:44.387Z] POST /api/carts//products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"[2023-10-12T19:14:44.419Z] GET /products"}
+{"level":"info","message":"[2023-10-12T19:14:44.571Z] GET /files/js/addProductToCart.js"}
+{"level":"info","message":"[2023-10-12T19:14:44.581Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T19:14:46.500Z] POST /api/carts//products/649f380fc49d922b26bc0356"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"Flowery 4107 Backend server is now up on port 8080"}
+{"level":"info","message":"[2023-10-12T19:21:31.933Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-10-12T19:21:31.974Z] GET /api/sessions/authFailureLogin"}
+{"level":"info","message":"[2023-10-12T19:21:32.910Z] POST /api/sessions/login"}
+{"level":"info","message":"[2023-10-12T19:21:32.912Z] GET /api/sessions/authFailureLogin"}
+{"level":"info","message":"[2023-10-12T19:21:32.975Z] POST /api/sessions/logout"}
+{"level":"info","message":"[2023-10-12T19:21:32.980Z] POST /api/sessions/logout"}
+{"level":"info","message":"[2023-10-12T19:21:32.984Z] GET /api/products"}
+{"level":"info","message":"[2023-10-12T19:21:32.998Z] GET /api/products/producto_id_valido"}
+{"level":"info","message":"[2023-10-12T19:21:33.008Z] POST /api/products"}
+{"level":"info","message":"[2023-10-12T19:21:33.021Z] DELETE /api/products/producto_id_valido"}
+{"level":"info","message":"[2023-10-12T19:22:04.259Z] GET /products"}
+{"level":"info","message":"[2023-10-12T19:22:04.441Z] GET /files/css/productList.css"}
+{"level":"info","message":"[2023-10-12T19:22:04.712Z] GET /files/js/addProductToCart.js"}

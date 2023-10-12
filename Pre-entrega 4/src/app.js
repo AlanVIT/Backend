@@ -21,6 +21,17 @@ import logger from './utils/logger.js';
 import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUIExpress from 'swagger-ui-express';
 import config from './config/enviroment.js';
+import { ProductManager } from "../src/dao/managers/products.manager.js";
+const products = []
+
+fetch('./data/products.json')
+.then(response => response.json())
+.then(data => {
+  products.push(...data)
+})
+.catch(error => {
+  console.error('Error al obtener los datos:', error);
+});
 
 const PORT = config.port;
 const ENVIRONMENT = config.environment;
@@ -66,6 +77,8 @@ if (ENVIRONMENT === 'development') {
     logger.level = 'debug';
 }
 
+const productManager = new ProductManager()
+
 const connection = mongoose.connect(MONGO)
 
 mongoose.connect(MONGO, {
@@ -74,6 +87,7 @@ mongoose.connect(MONGO, {
 })
 .then(() => {
     console.log(`MongoDB connection successful to ${DB_NAME} database`);
+    productManager.addProduct(products)
 })
 .catch(err => {
     console.log(`Cannot connect to MongoDB ${DB_NAME} database`);

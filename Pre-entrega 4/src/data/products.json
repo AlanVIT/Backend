@@ -1,35 +1,93 @@
 [
 	{
-		"id": "ECLzUrQ_f",
-		"title": "Producto de prueba",
-		"description": "Producto de prueba",
-		"code": "1",
-		"price": 100,
-		"status": true,
-		"stock": 10,
-		"category": "producto de prueba",
-		"thumbnails": []
+	  "title": "Laptop Ultrabook X1",
+	  "description": "Laptop ultraligera y potente para usuarios exigentes",
+	  "code": "x1a",
+	  "price": 1800,
+	  "stock": 10,
+	  "category": "laptops",
+	  "id": 1001
 	},
 	{
-		"id": "YdHht5QXh",
-		"title": "Producto de prueba",
-		"description": "Producto de prueba",
-		"code": "2",
-		"price": 100,
-		"status": true,
-		"stock": 10,
-		"category": "producto de prueba",
-		"thumbnails": []
+	  "title": "Smartphone Galaxy Z Fold 3",
+	  "description": "Un smartphone plegable con pantalla AMOLED",
+	  "code": "fold3",
+	  "price": 2200,
+	  "stock": 8,
+	  "category": "smartphones",
+	  "id": 1002
 	},
 	{
-		"id": "YVESWNUpq",
-		"title": "Producto de prueba",
-		"description": "Producto de prueba",
-		"code": "3",
-		"price": 100,
-		"status": true,
-		"stock": 10,
-		"category": "producto de prueba",
-		"thumbnails": []
+	  "title": "Monitor 4K Ultra HD",
+	  "description": "Monitor de alta resolución para una calidad de imagen excepcional",
+	  "code": "4kultra",
+	  "price": 800,
+	  "stock": 15,
+	  "category": "monitores",
+	  "id": 1003
+	},
+	{
+	  "title": "Impresora láser a color",
+	  "description": "Impresora de alto rendimiento para documentos a color",
+	  "code": "lasercol",
+	  "price": 600,
+	  "stock": 5,
+	  "category": "impresoras",
+	  "id": 1004
+	},
+	{
+	  "title": "Tablet Android Pro",
+	  "description": "Tablet de alto rendimiento con sistema Android",
+	  "code": "tabpro",
+	  "price": 450,
+	  "stock": 12,
+	  "category": "tablets",
+	  "id": 1005
+	},
+	{
+	  "title": "Auriculares Inalámbricos X2",
+	  "description": "Auriculares Bluetooth de alta calidad con cancelación de ruido",
+	  "code": "x2audio",
+	  "price": 120,
+	  "stock": 20,
+	  "category": "accesorios",
+	  "id": 1006
+	},
+	{
+	  "title": "Cámara DSLR Profesional",
+	  "description": "Cámara réflex digital de alto rendimiento para fotógrafos expertos",
+	  "code": "dslrpro",
+	  "price": 2500,
+	  "stock": 6,
+	  "category": "cámaras",
+	  "id": 1007
+	},
+	{
+	  "title": "Altavoz Bluetooth MegaSound",
+	  "description": "Altavoz portátil con sonido potente y batería de larga duración",
+	  "code": "megasound",
+	  "price": 150,
+	  "stock": 18,
+	  "category": "altavoces",
+	  "id": 1008
+	},
+	{
+	  "title": "Teclado Mecánico Gaming",
+	  "description": "Teclado para jugadores con retroiluminación RGB personalizable",
+	  "code": "gamingkb",
+	  "price": 100,
+	  "stock": 14,
+	  "category": "accesorios",
+	  "id": 1009
+	},
+	{
+	  "title": "Mouse Óptico Profesional",
+	  "description": "Mouse de alta precisión para tareas exigentes",
+	  "code": "mousepro",
+	  "price": 60,
+	  "stock": 25,
+	  "category": "accesorios",
+	  "id": 1010
 	}
-]
+  ]
+  
