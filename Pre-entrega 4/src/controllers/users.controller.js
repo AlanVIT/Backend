@@ -49,6 +49,14 @@ export class UsersController {
         }
     }
 
+    async getAllUsers(){
+        try {
+            return await this.usersManager.getAllUsers();
+        } catch (e) {
+            res.json({ error: e });
+        }
+    }
+
     createJwt(email){
         return token.sign({ email }, PRIVATE_KEY, { expiresIn: '1h' })
     }

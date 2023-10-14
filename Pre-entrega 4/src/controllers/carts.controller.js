@@ -17,19 +17,16 @@ export const CartController = {
             const cartId = req.params.cartId;
             const cart = await cartManager.getCart(cartId);
     
+            if (!cart) {
+                return res.status(404).json({ status: 0, msg: 'Carrito no encontrado' });
+            }
+    
             const unavailableProducts = [];
             let purchaseAllowed = true;
     
-            for (const item of cart.items) {
-                const product = await Product.findOne({ _id: item.productId });
-    
-                if (!product) {
-                    res.json({ status: 0, msg: `Producto con ID ${item.productId} no encontrado` });
-                    return;
-                }
-    
-                if (product.stock < item.quantity) {
-                    unavailableProducts.push(product.name);
+            for (const item of cart.products) {    
+                if (item.product.stock < item.quantity) {
+                    unavailableProducts.push(item.product.name);
                     purchaseAllowed = false;
                 }
             }
@@ -44,10 +41,10 @@ export const CartController = {
                 res.json({ status: 1, msg: 'Compra generada exitosamente' });
             }
         } catch (error) {
-            res.status(500).json({ error: error.message });
-        }    
+            res.status(500).json({ status: 0, msg: error.message });
+        }
     },
-
+    
     async getCart(req, res) {
         try {
             const cartId = req.params.cartId;
