@@ -10,6 +10,7 @@ import cartsRouter from './routes/carts.router.js'
 import messagesRouter from './routes/messages.router.js'
 import viewsRouter from './routes/views.router.js'
 import sessionsRouter from './routes/sessions.router.js'
+// import usersRouter from './routes/users.router.js'
 import { Server } from 'socket.io';
 import { productsUpdated, chat } from './utils/socketUtils.js';
 import displayRoutes from 'express-routemap';
@@ -21,17 +22,22 @@ import logger from './utils/logger.js';
 import swaggerJSDoc from 'swagger-jsdoc';
 import swaggerUIExpress from 'swagger-ui-express';
 import config from './config/enviroment.js';
-import { ProductManager } from "../src/dao/managers/products.manager.js";
-const products = []
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+const data = require("./data/products.json");
 
-fetch('./data/products.json')
-.then(response => response.json())
-.then(data => {
-  products.push(...data)
-})
-.catch(error => {
-  console.error('Error al obtener los datos:', error);
-});
+const products = [...data]
+
+logger.error(data)
+
+// fetch('./data/products.json')
+// .then(response => response.json())
+// .then(data => {
+//   products.push(...data)
+// })
+// .catch(error => {
+//   console.error('Error al obtener los datos:', error);
+// });
 
 const PORT = config.port;
 const ENVIRONMENT = config.environment;
@@ -77,7 +83,6 @@ if (ENVIRONMENT === 'development') {
     logger.level = 'debug';
 }
 
-const productManager = new ProductManager()
 
 const connection = mongoose.connect(MONGO)
 
@@ -87,7 +92,6 @@ mongoose.connect(MONGO, {
 })
 .then(() => {
     console.log(`MongoDB connection successful to ${DB_NAME} database`);
-    productManager.addProduct(products)
 })
 .catch(err => {
     console.log(`Cannot connect to MongoDB ${DB_NAME} database`);
@@ -119,6 +123,7 @@ app.use('/api/sessions', sessionsRouter);
 app.use('/api/products', productsRouter);
 app.use('/api/carts', cartsRouter);
 app.use('/api/messages', messagesRouter);
+// app.use('/api/users', usersRouter);
 app.use('/', viewsRouter);
 
 app.get('/loggerTest', (req, res) => {

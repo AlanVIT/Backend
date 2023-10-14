@@ -15,13 +15,17 @@ class CartManager {
     } catch (error) {
       throw new Error(`No se pudo agregar el carrito: ${error.message}`);
     }
-  }
+}
+
 
   getCart = async (cartId) => {
+    let cart = ''
     try {
-      const cart = await this.cartModel.findById(cartId).lean();
-      if (!cart) {
-        throw new Error('Carrito no encontrado');
+      if (!cartId) {
+      cart = await this.cartModel.find();
+      }
+      else{
+        cart = await this.cartModel.findById(cartId).lean();
       }
       return cart;
     } catch (error) {
@@ -31,10 +35,13 @@ class CartManager {
 
   addToCart = async (cartId, productId) => {
     try {
-      const cart = await this.cartModel.findById(cartId);
-      if (!cart) {
-        throw new Error('Carrito no encontrado');
+      let cart = '';
+      if (cartId) {
+          cart = await this.cartModel.findById(cartId);
+      } else {
+          cart = await this.createCart();
       }
+      
       if (!productId) {
         throw new Error('Se requiere ID de producto');
       }
@@ -51,7 +58,7 @@ class CartManager {
       await cart.save();
       return cart;
     } catch (error) {
-      throw new Error(`No se pudo agregar el producto al carrito: ${error.message}`);
+      console.log(error)
     }
   }
 

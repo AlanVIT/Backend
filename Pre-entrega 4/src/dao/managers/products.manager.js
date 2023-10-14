@@ -76,7 +76,7 @@ export class ProductManager {
       ticketAct.push(newProduct)
       return newProduct;
     } catch (error) {
-      throw new Error(`${errorDictionary.ADD_PRODUCT_ERROR}: ${error.message}`);
+      throw new Error(`${errorDictionary.ADD_PRODUCT_ERROR}: ${error}`);
   }
   }
 

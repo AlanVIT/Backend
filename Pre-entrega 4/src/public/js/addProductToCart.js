@@ -4,32 +4,40 @@ const addListeners = () => {
         button.addEventListener('click', addToCart);
     });
 }
-
-
-const addToCart = async (event) => {
+const createCart = async () => {
     try {
-        const cartId = []
-        if (cartId) {
-            const productId = event.target.dataset.id;
+        const response = await fetch('/api/carts', {
+            method: 'GET',
+        });
+        if (!response.ok) {
+            return undefined
+        }
+        const data = JSON.stringify( await response.json())
+        return data.cartId;
+    } catch (error) {
+        console.error(error);
+        return null;
+    }
+}
+
+const addToCart = async () => {
+    try {
+        const cartId = await createCart();
+            const productId = document.getElementById('productId').value;
+            console.log(productId);
             const response = await fetch(`/api/carts/${cartId}/products/${productId}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 }
             });
-            if (response.ok) {
+
                 const result = await response.json();
                 if (result.status === 1) {
                     alert(`Producto agregado al carrito ${cartId} exitosamente!`);
                 } else {
                     alert('Error al agregar el producto al carrito');
                 }
-            } else {
-                throw new Error('Error en la solicitud para agregar el producto al carrito');
-            }
-        } else {
-            alert('No se pudo crear un carrito nuevo');
-        }
     } catch (error) {
         console.error(error);
     }

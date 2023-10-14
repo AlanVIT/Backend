@@ -51,13 +51,21 @@ export const CartController = {
     async getCart(req, res) {
         try {
             const cartId = req.params.cartId;
-            const cart = await cartManager.getCart(cartId);
+            let cart = ''
+            cartId? cart = await cartManager.getCart(cartId):cart=await cartManager.getCart()
             res.json({ status: 1, cart });
         } catch (error) {
             res.status(500).json({ error: error.message });
         }
     },
-
+    // async postCart() {
+    //     try {
+    //         const cart = await cartManager.addCart();
+    //         res.json({ status: 1, cart });
+    //     } catch (error) {
+    //         res.status(500).json({ error: error.message });
+    //     }
+    // },
     async addProductsToCart(req, res) {
         try {
             const cartId = req.params.cartId;

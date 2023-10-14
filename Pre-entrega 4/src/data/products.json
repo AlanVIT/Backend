@@ -5,8 +5,7 @@
 	  "code": "x1a",
 	  "price": 1800,
 	  "stock": 10,
-	  "category": "laptops",
-	  "id": 1001
+	  "category": "laptops" 
 	},
 	{
 	  "title": "Smartphone Galaxy Z Fold 3",
@@ -14,8 +13,7 @@
 	  "code": "fold3",
 	  "price": 2200,
 	  "stock": 8,
-	  "category": "smartphones",
-	  "id": 1002
+	  "category": "smartphones"
 	},
 	{
 	  "title": "Monitor 4K Ultra HD",
@@ -23,8 +21,7 @@
 	  "code": "4kultra",
 	  "price": 800,
 	  "stock": 15,
-	  "category": "monitores",
-	  "id": 1003
+	  "category": "monitores"
 	},
 	{
 	  "title": "Impresora láser a color",
@@ -32,8 +29,7 @@
 	  "code": "lasercol",
 	  "price": 600,
 	  "stock": 5,
-	  "category": "impresoras",
-	  "id": 1004
+	  "category": "impresoras"
 	},
 	{
 	  "title": "Tablet Android Pro",
@@ -41,8 +37,7 @@
 	  "code": "tabpro",
 	  "price": 450,
 	  "stock": 12,
-	  "category": "tablets",
-	  "id": 1005
+	  "category": "tablets"
 	},
 	{
 	  "title": "Auriculares Inalámbricos X2",
@@ -50,8 +45,7 @@
 	  "code": "x2audio",
 	  "price": 120,
 	  "stock": 20,
-	  "category": "accesorios",
-	  "id": 1006
+	  "category": "accesorios"
 	},
 	{
 	  "title": "Cámara DSLR Profesional",
@@ -59,8 +53,7 @@
 	  "code": "dslrpro",
 	  "price": 2500,
 	  "stock": 6,
-	  "category": "cámaras",
-	  "id": 1007
+	  "category": "cámaras"
 	},
 	{
 	  "title": "Altavoz Bluetooth MegaSound",
@@ -68,8 +61,7 @@
 	  "code": "megasound",
 	  "price": 150,
 	  "stock": 18,
-	  "category": "altavoces",
-	  "id": 1008
+	  "category": "altavoces"
 	},
 	{
 	  "title": "Teclado Mecánico Gaming",
@@ -77,8 +69,7 @@
 	  "code": "gamingkb",
 	  "price": 100,
 	  "stock": 14,
-	  "category": "accesorios",
-	  "id": 1009
+	  "category": "accesorios"
 	},
 	{
 	  "title": "Mouse Óptico Profesional",
@@ -86,8 +77,7 @@
 	  "code": "mousepro",
 	  "price": 60,
 	  "stock": 25,
-	  "category": "accesorios",
-	  "id": 1010
+	  "category": "accesorios"
 	}
   ]
   
