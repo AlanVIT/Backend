@@ -4,27 +4,39 @@ const addListeners = () => {
         button.addEventListener('click', addToCart);
     });
 }
+
 const createCart = async () => {
     try {
         const response = await fetch('/api/carts', {
             method: 'GET',
         });
+
         if (!response.ok) {
-            return undefined
+            return undefined;
         }
-        const data = JSON.stringify( await response.json())
-        return data.cartId;
+
+        const responseData = await response.json();
+        if (Array.isArray(responseData.cart) && responseData.cart.length > 0) {
+            const cartId = responseData.cart[0]._id;
+            return cartId;
+        } else {
+            console.error("No se encontró ningún elemento con la propiedad '_id' en la respuesta.");
+            return null;
+        }
+
     } catch (error) {
         console.error(error);
         return null;
     }
 }
 
-const addToCart = async () => {
+const addToCart = async (event) => {
+    const button = event.target;
+    const productId = button.getAttribute('data-id');
+
     try {
         const cartId = await createCart();
-            const productId = document.getElementById('productId').value;
-            console.log(productId);
+        if (cartId !== null) {
             const response = await fetch(`/api/carts/${cartId}/products/${productId}`, {
                 method: 'POST',
                 headers: {
@@ -32,12 +44,13 @@ const addToCart = async () => {
                 }
             });
 
-                const result = await response.json();
-                if (result.status === 1) {
-                    alert(`Producto agregado al carrito ${cartId} exitosamente!`);
-                } else {
-                    alert('Error al agregar el producto al carrito');
-                }
+            const result = await response.json();
+            if (result.status === 1) {
+                alert(`Producto agregado al carrito ${cartId} exitosamente!`);
+            } else {
+                alert('Error al agregar el producto al carrito');
+            }
+        }
     } catch (error) {
         console.error(error);
     }

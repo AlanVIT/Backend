@@ -8,6 +8,7 @@ const usersSchema = new mongoose.Schema({
     email: { type: String, required: true },
     birthDate: { type: Date },
     password: { type: String },
+    last_connection:{ type: Date }
 })
 
 const UsersModel = mongoose.model(usersCollection, usersSchema);

@@ -78,6 +78,7 @@ export const CartController = {
         try {
             const cartId = req.params.cartId;
             const productId = req.params.productId;
+            console.log(`Adding product with ID ${productId} to cart with ID ${cartId}`);
             const cart = await cartManager.addToCart(cartId, productId);
             res.status(201).send({ status: 1, msg: 'Producto añadido al carrito con éxito', cart });
         } catch (error) {

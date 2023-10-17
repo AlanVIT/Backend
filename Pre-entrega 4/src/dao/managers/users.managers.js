@@ -68,4 +68,29 @@ export default class UsersManager {
             );
         }
     }
+    async DosDias(fecha) {
+        var fechaActual = new Date();
+        var last_connection = new Date(fecha);
+        last_connection.setDate(last_connection.getDate() + 2);
+        if (fechaActual >= fechaDosDiasDespues) {
+          return true
+        } else {
+          return false
+        }
+      }
+    async deleteUsers() {
+        try {
+            const users = await this.usersModel.find({});
+            return users.forEach(user=>{
+                if(this.DosDias(user.last_connection)){
+                    this.usersModel.deleteOne(user)
+                }
+            });
+        } catch (error) {
+            console.log(
+                "🚀 ~ file: users.manager.js:44 ~ UsersManager ~ toggleUserRole ~ error:",
+                error
+            );
+        }
+    }
 }

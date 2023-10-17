@@ -23,7 +23,10 @@ const cartsSchema = new Schema({
   }
 });
 
-cartsSchema.pre('findOne', function() {
+cartsSchema.pre('._findOne', function() {
+  this.populate('products.product');
+});
+cartsSchema.pre('find', function() {
   this.populate('products.product');
 });
 

@@ -16,8 +16,6 @@ class CartManager {
       throw new Error(`No se pudo agregar el carrito: ${error.message}`);
     }
 }
-
-
   getCart = async (cartId) => {
     let cart = ''
     try {
@@ -35,32 +33,41 @@ class CartManager {
 
   addToCart = async (cartId, productId) => {
     try {
+      console.log(`manager: Adding product with ID ${productId} to cart with ID ${cartId}`);
       let cart = '';
+  
       if (cartId) {
-          cart = await this.cartModel.findById(cartId);
+        cart = await this.cartModel.findById(cartId);
       } else {
-          cart = await this.createCart();
+        cart = await this.createCart();
       }
-      
+  
       if (!productId) {
         throw new Error('Se requiere ID de producto');
       }
+  
       const product = await this.productModel.findById(productId);
+  
       if (!product) {
         throw new Error('Producto no encontrado');
       }
-      const existingProduct = cart.products.find((product) => product.product._id.toString() === productId);
+      // Busca el producto dentro de la estructura de objetos
+      const existingProduct = cart.products.find((item) => item.product._id.toString() === productId);
+  
       if (existingProduct) {
         existingProduct.quantity += 1;
       } else {
-        cart.products.push({ product: product, quantity: 1 })
+        cart.products.push({ product: product, quantity: 1 });
       }
+  
+      // Guarda el carrito
       await cart.save();
       return cart;
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
   }
+  
 
   removeFromCart = async (cartId, productId) => {
     try {

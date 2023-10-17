@@ -5,7 +5,7 @@ import { UsersController } from '../controllers/users.controller.js';
 import uploader from '../utils/multer.js';
 
 const router = Router();
-const usersController = new UsersController();
+const usersController = UsersController;
 
 router.post('/register', passport.authenticate('register', { failureRedirect: '/api/sessions/authFailureRegister', failureFlash: true }), async (req, res) => {
     req.session.user = {
@@ -28,12 +28,12 @@ router.post('/login', passport.authenticate('login', { failureRedirect: '/api/se
     res.send({ status: 1, msg: 'El usuario inició sesión con éxito', user: req.session.user });
 });
 
-router.post('/resetpassword', passport.authenticate('resetPassword', { failureRedirect: '/api/sessions/authFailureReset', failureFlash: true }), async (req, res) => {
+router.get('/resetpassword', async (req, res) => {
    usersController.sendEmail(req.user.email)
     res.send({ status: 1, msg: 'Contraseña restablecida con éxito. Será redirigido a la página de inicio de sesión' });
 });
 
-router.post('/logout', (req, res) => {
+router.get('/logout', (req, res) => {
     req.session.destroy();
     res.send({ status: 1, msg: 'Usuario desconectado con exito ' });
 });

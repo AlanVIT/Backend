@@ -16,13 +16,10 @@ const mailConfig = {
 
 const transport = nodemailer.createTransport(mailConfig);
 
-export class UsersController {
+    const usersManager = new UsersManager();
+    
 
-    usersManager;
-
-    constructor() {
-        this.usersManager = new UsersManager();
-    }
+export const UsersController = {
 
     async sendEmail(email){
         try {
@@ -39,31 +36,37 @@ export class UsersController {
         } catch (e) {
             res.json({ error: e });
         }
-    }
+    },
 
     async getUserByEmail(email){
         try {
-            return await this.usersManager.getUserByEmail(email);
+            return await usersManager.getUserByEmail(email);
         } catch (e) {
             res.json({ error: e });
         }
-    }
+    },
 
     async getAllUsers(){
         try {
-            return await this.usersManager.getAllUsers();
+            return await usersManager.getAllUsers();
         } catch (e) {
             res.json({ error: e });
         }
-    }
-
+    },
+    async deleteUsers(){
+        try {
+            return await usersManager.deleteUsers();
+        } catch (e) {
+            res.json({ error: e });
+        }
+    },
     createJwt(email){
         return token.sign({ email }, PRIVATE_KEY, { expiresIn: '1h' })
-    }
+    },
 
     async updateUserRole(id){
         try {
-            const user = await this.usersManager.getUserById(id);
+            const user = await usersManager.getUserById(id);
 
             if(user.role === 'user'){
                 const requiredDocuments = ['id', 'address', 'account'];
@@ -76,25 +79,25 @@ export class UsersController {
                 if (!hasAllDocuments) throw new Error('User must have all documents');
             }
 
-            return await this.usersManager.toggleUserRole(user);
+            return await usersManager.toggleUserRole(user);
         } catch (e) {
             throw new Error(e);
         }
-    }
+    },
 
     async setLastConnection(email){
         try {
-            const user = await this.usersManager.getUserByEmail(email);
+            const user = await usersManager.getUserByEmail(email);
             if( !user ) throw new Error('User not found');
-            await this.usersManager.setLastConnection(user);
+            await usersManager.setLastConnection(user);
         } catch (e) {
             throw new Error(e);
         }
-    }
+    },
 
     async updateUserDocuments(id, files){
         try {
-            const user = await this.usersManager.getUserById(id);
+            const user = await usersManager.getUserById(id);
             const documents = user.documents || [];
 
             // const newDocuments = documents;
